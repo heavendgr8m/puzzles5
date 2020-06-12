@@ -18,7 +18,7 @@
 
     exports.push([module.i, "/* You can add global styles to this file, and also import other style files */", "", {
       "version": 3,
-      "sources": ["D:\\Mohan\\Work\\Extra\\Puzzle\\puzzles5/src\\styles.scss"],
+      "sources": ["D:\\Mohan\\Work\\Extra\\Puzzle\\puzzles5\\dist\\puzzles5/..\\..\\src\\styles.scss"],
       "names": [],
       "mappings": "AAAA,8EAAA",
       "file": "styles.scss",
