@@ -1,0 +1,16 @@
+<div class="level2">
+    <h1>LVL 2</h1>
+    <div class="content">
+        <img [src]="isProd?'assets/lvl2.png':'../../../assets/lvl2.png'" alt="">
+        <form>
+            <input type="text" id="field-name" name="field-name" maxlength="4" autocomplete="off" [(ngModel)]="code">
+            <svg viewBox="0 0 240 1" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="0" x2="240" y2="0" stroke="black" />
+            </svg>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="code === '1234'">
+    <app-level3></app-level3>
+</div>
