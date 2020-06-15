@@ -30,7 +30,8 @@
             display: block;
             width: 100%;
             height: 40px;
-
+            font-family: "Indie Flower", cursive;
+            font-weight: 600;
             font-size: 20px !important;
             line-height: 40px;
 
@@ -61,7 +62,7 @@
             }
 
             &[maxlength="4"] {
-                padding-left: 20px;
+                padding-left: 25px;
                 letter-spacing: 50px;
 
                 & + svg {

@@ -1,1 +1,10 @@
-<h1>LVL 3</h1>
+<div class="level3">
+    <h1>LVL 3</h1>
+    <div class="content">
+        <h3>Escape before pixels consume you!</h3>
+        <canvas #mycanvas></canvas>
+    </div>
+</div>
+<div *ngIf="unlocked">
+    <app-level4></app-level4>
+</div>

@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class Level2Component implements OnInit {
   isProd = environment.production;
-  code = '';
+  code = '1234';
   constructor() { }
 
   ngOnInit(): void {
