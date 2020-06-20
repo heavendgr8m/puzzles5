@@ -1,10 +1,11 @@
-<div class="level3">
+<div class="level3" *ngIf="!lvl4unlocked">
     <h1>LVL 3</h1>
     <div class="content">
-        <h3>Escape before pixels consume you!</h3>
+        <h3>Escape to LVL 4 before pixels </h3>
+        <h3>consume the screen !!!</h3>
         <canvas #mycanvas></canvas>
     </div>
 </div>
-<div *ngIf="unlocked">
+<div *ngIf="lvl4unlocked">
     <app-level4></app-level4>
 </div>

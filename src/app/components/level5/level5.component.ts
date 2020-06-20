@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./level5.component.scss']
 })
 export class Level5Component implements OnInit {
-
+  success;
   constructor() { }
 
   ngOnInit(): void {

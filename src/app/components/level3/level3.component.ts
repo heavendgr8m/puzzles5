@@ -11,10 +11,10 @@ export class Level3Component implements OnInit, AfterViewInit {
   public ctx: CanvasRenderingContext2D;
   public raf;
   pixelInterval: any;
-  unlocked: boolean;
+  lvl4unlocked: boolean = true;
   @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
     console.log(event, this.pixelInterval);
-    this.unlocked = true;
+    this.lvl4unlocked = true;
     if (this.pixelInterval) {
       clearTimeout(this.pixelInterval);
       this.pixelInterval = 0;
@@ -26,30 +26,33 @@ export class Level3Component implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
   ngAfterViewInit() {
-    const width = this.mycanvas.nativeElement.width = window.innerWidth;
-    const height = this.mycanvas.nativeElement.height = window.innerHeight;
-    this.ctx = this.mycanvas.nativeElement.getContext('2d');
+    if (this.mycanvas) {
+      const width = this.mycanvas.nativeElement.width = window.innerWidth;
+      const height = this.mycanvas.nativeElement.height = window.innerHeight;
+      this.ctx = this.mycanvas.nativeElement.getContext('2d');
+    }
+
     let i = 0;
     let j = 0;
-    this.pixelInterval = setInterval(() => {
-      this.animate(i, j);
-      this.animate(i + 5, j);
-      j += 2;
-      console.log(i + '/' + j);
-      if (j >= 140) {
-        i += 2;
-        j = 0;
-        if (i >= 140) {
-          cancelAnimationFrame(this.raf);
-        }
-      }
-      this.raf = requestAnimationFrame(() => {
-        this.animate(i, j);
-      });
-      // this.animate(width, height);
-      console.log('Adding Pixel');
-      // i += 10;
-    }, 5);
+    // this.pixelInterval = setInterval(() => {
+    //   this.animate(i, j);
+    //   this.animate(i + 5, j);
+    //   j += 2;
+    //   console.log(i + '/' + j);
+    //   if (j >= 140) {
+    //     i += 2;
+    //     j = 0;
+    //     if (i >= 140) {
+    //       cancelAnimationFrame(this.raf);
+    //     }
+    //   }
+    //   this.raf = requestAnimationFrame(() => {
+    //     this.animate(i, j);
+    //   });
+    //   // this.animate(width, height);
+    //   console.log('Adding Pixel');
+    //   // i += 10;
+    // }, 5);
   }
   randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

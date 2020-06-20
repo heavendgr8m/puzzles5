@@ -1,1 +1,84 @@
-<h1>LVL 4</h1>
+<div class="level4" *ngIf="!lvl5unlocked">
+    <h1>LVL 4</h1>
+    <div class="content">
+        <h3>Solve to move to LVL 5</h3>
+        <div class="chessboard">
+            <!-- 1st -->
+            <div class="white" (click)="appendRows('a1')"><span class="chessdigits">A</span>&#9820;</div>
+            <div class="black" (click)="appendRows('b1')"><span class="chessdigits">B</span></div>
+            <div class="white" (click)="appendRows('c1')"><span class="chessdigits">C</span>&#9821;</div>
+            <div class="black" (click)="appendRows('d1')"><span class="chessdigits">D</span>&#9818;</div>
+            <div class="white" (click)="appendRows('e1')"><span class="chessdigits">E</span>&#9815;</div>
+            <div class="black" (click)="appendRows('f1')"><span class="chessdigits">F</span>&#9817;</div>
+            <div class="white" (click)="appendRows('g1')"><span class="chessdigits">G</span>&#9814;</div>
+            <div class="black" (click)="appendRows('h1')"><span class="chessdigits">H</span></div>
+            <!-- 2nd -->
+            <div class="black" (click)="appendRows('a2')"></div>
+            <div class="white" (click)="appendRows('b2')"></div>
+            <div class="black" (click)="appendRows('c2')"></div>
+            <div class="white" (click)="appendRows('d2')"></div>
+            <div class="black" (click)="appendRows('e2')"></div>
+            <div class="white" (click)="appendRows('f2')"></div>
+            <div class="black" (click)="appendRows('g2')"></div>
+            <div class="white" (click)="appendRows('h2')"><span class="chessdigits">2</span></div>
+            <!-- 3th -->
+            <div class="white" (click)="appendRows('a3')">&#9822;</div>
+            <div class="black" (click)="appendRows('b3')">&#9817;</div>
+            <div class="white" (click)="appendRows('c3')"></div>
+            <div class="black" (click)="appendRows('d3')">&#9823;</div>
+            <div class="white" (click)="appendRows('e3')">&#9817;</div>
+            <div class="black" (click)="appendRows('f3')">&#9814;</div>
+            <div class="white" (click)="appendRows('g3')">&#9817;</div>
+            <div class="black" (click)="appendRows('h3')">&#9817;<span class="chessdigits">3</span></div>
+            <!-- 4st -->
+            <div class="black" (click)="appendRows('a4')"></div>
+            <div class="white" (click)="appendRows('b4')"></div>
+            <div class="black" (click)="appendRows('c4')"></div>
+            <div class="white" (click)="appendRows('d4')"></div>
+            <div class="black" (click)="appendRows('e4')"></div>
+            <div class="white" (click)="appendRows('f4')"></div>
+            <div class="black" (click)="appendRows('g4')"></div>
+            <div class="white" (click)="appendRows('h4')"><span class="chessdigits">4</span></div>
+            <!-- 5th -->
+            <div class="white" (click)="appendRows('a5')">&#9823;</div>
+            <div class="black" (click)="appendRows('b5')"></div>
+            <div class="white" (click)="appendRows('c5')">&#9816;</div>
+            <div class="black" (click)="appendRows('d5')">&#9815;</div>
+            <div class="white" (click)="appendRows('e5')">&#9817;</div>
+            <div class="black" (click)="appendRows('f5')">&#9823;</div>
+            <div class="white" (click)="appendRows('g5')">&#9823;</div>
+            <div class="black" (click)="appendRows('h5')"><span class="chessdigits">5</span></div>
+            <!-- 6th -->
+            <div class="black" (click)="appendRows('a6')"></div>
+            <div class="white" (click)="appendRows('b6')"></div>
+            <div class="black" (click)="appendRows('c6')"></div>
+            <div class="white" (click)="appendRows('d6')"></div>
+            <div class="black" (click)="appendRows('e6')"></div>
+            <div class="white" (click)="appendRows('f6')"></div>
+            <div class="black" (click)="appendRows('g6')"></div>
+            <div class="white" (click)="appendRows('h6')"><span class="chessdigits">6</span></div>
+            <!-- 7th -->
+            <div class="white" (click)="appendRows('a6')">&#9820;</div>
+            <div class="black" (click)="appendRows('b6')">&#9816;</div>
+            <div class="white" (click)="appendRows('c6')"></div>
+            <div class="black" (click)="appendRows('d6')">&#9821; </div>
+            <div class="white" (click)="appendRows('e6')">&#9822;</div>
+            <div class="black" (click)="appendRows('f6')">&#9819;</div>
+            <div class="white" (click)="appendRows('g6')">&#9813;</div>
+            <div class="black" (click)="appendRows('h6')">&#9812;<span class="chessdigits">7</span></div>
+            <!-- 8th -->
+            <div class="black" (click)="appendRows('a8')"></div>
+            <div class="white" (click)="appendRows('b8')"></div>
+            <div class="black" (click)="appendRows('c8')"></div>
+            <div class="white" (click)="appendRows('d8')"></div>
+            <div class="black" (click)="appendRows('e8')"></div>
+            <div class="white" (click)="appendRows('f8')"></div>
+            <div class="black" (click)="appendRows('g8')"></div>
+            <div class="white" (click)="appendRows('h8')"><span class="chessdigits">8</span></div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="lvl5unlocked">
+    <app-level5></app-level5>
+</div>

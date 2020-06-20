@@ -1,1 +1,10 @@
-<h1>LVL 5</h1>
+<div class="level5" *ngIf="!success">
+    <h1>LVL 5</h1>
+    <div class="content">
+        <h3>Just a word away from success!</h3>
+    </div>
+</div>
+
+<div *ngIf="success">
+    <app-level5></app-level5>
+</div>
