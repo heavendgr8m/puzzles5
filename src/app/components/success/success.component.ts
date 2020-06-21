@@ -16,8 +16,8 @@ export class SuccessComponent implements OnInit {
   ngOnInit(): void {
     this.timerApi.stopTimer();
     this.completionTime = this.timerApi.getTime();
-    console.log(this.timerApi.getTime());
-    // this.userName = prompt('Please enter your Name');
+    // console.log(this.timerApi.getTime());
+    this.userName = prompt('Please enter your Name');
   }
 
 }

@@ -28,7 +28,7 @@ export class Level5Component implements OnInit {
   ngOnInit(): void {
   }
   unlock() {
-    console.log(this.word1 + this.word2 + this.word3 + this.word4 + this.word5 + this.word6);
+    // console.log(this.word1 + this.word2 + this.word3 + this.word4 + this.word5 + this.word6);
     if (this.word1 + this.word2 + this.word3 + this.word4 + this.word5 + this.word6 === this.key) {
       this.success = true;
     }

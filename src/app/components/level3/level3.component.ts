@@ -11,9 +11,9 @@ export class Level3Component implements OnInit, AfterViewInit {
   public ctx: CanvasRenderingContext2D;
   public raf;
   pixelInterval: any;
-  lvl4unlocked: boolean = true;
+  lvl4unlocked = false;
   @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
-    console.log(event, this.pixelInterval);
+    // console.log(event, this.pixelInterval);
     this.lvl4unlocked = true;
     if (this.pixelInterval) {
       clearTimeout(this.pixelInterval);
@@ -34,25 +34,25 @@ export class Level3Component implements OnInit, AfterViewInit {
 
     let i = 0;
     let j = 0;
-    // this.pixelInterval = setInterval(() => {
-    //   this.animate(i, j);
-    //   this.animate(i + 5, j);
-    //   j += 2;
-    //   console.log(i + '/' + j);
-    //   if (j >= 140) {
-    //     i += 2;
-    //     j = 0;
-    //     if (i >= 140) {
-    //       cancelAnimationFrame(this.raf);
-    //     }
-    //   }
-    //   this.raf = requestAnimationFrame(() => {
-    //     this.animate(i, j);
-    //   });
-    //   // this.animate(width, height);
-    //   console.log('Adding Pixel');
-    //   // i += 10;
-    // }, 5);
+    this.pixelInterval = setInterval(() => {
+      this.animate(i, j);
+      this.animate(i + 5, j);
+      j += 2;
+      // console.log(i + '/' + j);
+      if (j >= 140) {
+        i += 2;
+        j = 0;
+        if (i >= 140) {
+          cancelAnimationFrame(this.raf);
+        }
+      }
+      this.raf = requestAnimationFrame(() => {
+        this.animate(i, j);
+      });
+      // this.animate(width, height);
+      // console.log('Adding Pixel');
+      // i += 10;
+    }, 5);
   }
   randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

@@ -9,7 +9,7 @@ export class Level4Component implements OnInit {
   morsecode = '. ..--- / .- .---- / . ---.. / .- ...--';
   rows = 'e2a1e8a3';
   key: string;
-  lvl5unlocked = true;
+  lvl5unlocked = false;
   constructor() {
     this.key = '';
   }
@@ -18,10 +18,10 @@ export class Level4Component implements OnInit {
   }
   appendRows(cellval: string) {
     this.key = this.key.concat(cellval);
-    console.log(cellval, this.key);
+    // console.log(cellval, this.key);
     if (this.key === this.rows) {
       this.lvl5unlocked = true;
-      console.log('Unlocked Level 5');
+      // console.log('Unlocked Level 5');
     }
   }
 }
