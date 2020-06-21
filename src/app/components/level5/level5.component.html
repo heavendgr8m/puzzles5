@@ -1,10 +1,26 @@
 <div class="level5" *ngIf="!success">
     <h1>LVL 5</h1>
     <div class="content">
-        <h3>Just a word away from success!</h3>
+        <h3>Just a word away to open the success door!</h3>
+        <div class="word-image">
+            <img [src]="isProd?'assets/empire_state_building.png':'../../../assets/empire_state_building.png'" alt="">
+            <img [src]="isProd?'assets/moai.png':'../../../assets/moai.png'" alt="">
+            <img [src]="isProd?'assets/eiffel_tower.png':'../../../assets/eiffel_tower.png'" alt="">
+            <img [src]="isProd?'assets/statue_of_liberty.png':'../../../assets/statue_of_liberty.png'" alt="">
+            <img [src]="isProd?'assets/angkor_wat.png':'../../../assets/angkor_wat.png'" alt="">
+            <img [src]="isProd?'assets/sydney_opera_house.png':'../../../assets/sydney_opera_house.png'" alt="">
+        </div>
+        <div class="wordbox">
+            <input id="codeBox1" type="text" maxlength="1" [(ngModel)]="word1" autocomplete="off" (change)="unlock()">
+            <input id="codeBox2" type="text" maxlength="1" [(ngModel)]="word2" autocomplete="off" (change)="unlock()">
+            <input id="codeBox3" type="text" maxlength="1" [(ngModel)]="word3" autocomplete="off" (change)="unlock()">
+            <input id="codeBox4" type="text" maxlength="1" [(ngModel)]="word4" autocomplete="off" (change)="unlock()">
+            <input id="codeBox5" type="text" maxlength="1" [(ngModel)]="word5" autocomplete="off" (change)="unlock()">
+            <input id="codeBox6" type="text" maxlength="1" [(ngModel)]="word6" autocomplete="off" (change)="unlock()">
+        </div >
     </div>
 </div>
 
 <div *ngIf="success">
-    <app-level5></app-level5>
+    <app-success></app-success>
 </div>
