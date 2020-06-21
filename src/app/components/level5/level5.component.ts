@@ -28,9 +28,13 @@ export class Level5Component implements OnInit {
   ngOnInit(): void {
   }
   unlock() {
-    // console.log(this.word1 + this.word2 + this.word3 + this.word4 + this.word5 + this.word6);
-    if (this.word1 + this.word2 + this.word3 + this.word4 + this.word5 + this.word6 === this.key) {
+    console.log(this.word1 + this.word2 + this.word3 + this.word4 + this.word5 + this.word6);
+    if ((this.word1.toLowerCase() + this.word2.toLowerCase() +
+     this.word3.toLowerCase() + this.word4.toLowerCase() +
+      this.word5.toLowerCase() + this.word6.toLowerCase()).match(this.key.toLowerCase())) {
       this.success = true;
+    } else {
+      this.success = false;
     }
   }
 }

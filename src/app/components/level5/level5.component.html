@@ -11,12 +11,12 @@
             <img [src]="isProd?'assets/sydney_opera_house.png':'../../../assets/sydney_opera_house.png'" alt="">
         </div>
         <div class="wordbox">
-            <input id="codeBox1" type="text" maxlength="1" [(ngModel)]="word1" autocomplete="off" (change)="unlock()">
-            <input id="codeBox2" type="text" maxlength="1" [(ngModel)]="word2" autocomplete="off" (change)="unlock()">
-            <input id="codeBox3" type="text" maxlength="1" [(ngModel)]="word3" autocomplete="off" (change)="unlock()">
-            <input id="codeBox4" type="text" maxlength="1" [(ngModel)]="word4" autocomplete="off" (change)="unlock()">
-            <input id="codeBox5" type="text" maxlength="1" [(ngModel)]="word5" autocomplete="off" (change)="unlock()">
-            <input id="codeBox6" type="text" maxlength="1" [(ngModel)]="word6" autocomplete="off" (change)="unlock()">
+            <input id="codeBox1" type="text" maxlength="1" [(ngModel)]="word1" autocomplete="off" (keydown)="unlock()">
+            <input id="codeBox2" type="text" maxlength="1" [(ngModel)]="word2" autocomplete="off" (keydown)="unlock()">
+            <input id="codeBox3" type="text" maxlength="1" [(ngModel)]="word3" autocomplete="off" (keydown)="unlock()">
+            <input id="codeBox4" type="text" maxlength="1" [(ngModel)]="word4" autocomplete="off" (keydown)="unlock()">
+            <input id="codeBox5" type="text" maxlength="1" [(ngModel)]="word5" autocomplete="off" (keydown)="unlock()">
+            <input id="codeBox6" type="text" maxlength="1" [(ngModel)]="word6" autocomplete="off" (keydown)="unlock()">
         </div >
     </div>
 </div>
