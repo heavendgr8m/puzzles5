@@ -9,6 +9,7 @@ import { Level2Component } from './components/level2/level2.component';
 import { Level3Component } from './components/level3/level3.component';
 import { Level4Component } from './components/level4/level4.component';
 import { Level5Component } from './components/level5/level5.component';
+import { SuccessComponent } from './components/success/success.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Level5Component } from './components/level5/level5.component';
     Level2Component,
     Level3Component,
     Level4Component,
-    Level5Component
+    Level5Component,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
