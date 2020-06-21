@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./level5.component.scss']
 })
 export class Level5Component implements OnInit {
-  success = true;
+  success = false;
   key = 'SESAME';
   word1: string;
   word2: string;

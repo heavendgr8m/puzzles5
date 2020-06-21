@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { TimerService } from 'src/app/services/timer.service';
 
 @Component({
   selector: 'app-success',
@@ -9,9 +10,13 @@ import { environment } from 'src/environments/environment';
 export class SuccessComponent implements OnInit {
   userName: string;
   isProd = environment.production;
-  constructor() { }
+  completionTime: string;
+  constructor(public timerApi: TimerService) { }
 
   ngOnInit(): void {
+    this.timerApi.stopTimer();
+    this.completionTime = this.timerApi.getTime();
+    console.log(this.timerApi.getTime());
     // this.userName = prompt('Please enter your Name');
   }
 
